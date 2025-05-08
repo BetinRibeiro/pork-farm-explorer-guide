@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                farm: {
+                    pink: '#FF8C9D',
+                    brown: '#8B4513',
+                    green: '#75B74E',
+                    lightGreen: '#D0F0C0',
+                    dirt: '#C4A484',
+                    straw: '#F0E68C'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +93,21 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                wiggle: {
+                    '0%, 100%': { transform: 'rotate(-3deg)' },
+                    '50%': { transform: 'rotate(3deg)' }
+                },
+                bounce: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-5px)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'wiggle': 'wiggle 1s ease-in-out infinite',
+                'slow-bounce': 'bounce 3s ease-in-out infinite'
 			}
 		}
 	},
